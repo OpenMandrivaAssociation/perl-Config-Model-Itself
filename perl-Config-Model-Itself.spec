@@ -10,7 +10,8 @@ Summary:    Edit and validate configuration models
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source:     http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires: perl(Module::Build)
-BuildRequires: perl(Config::Model)
+BuildRequires: perl(Config::Model::TkUI)
+BuildRequires: perl(Exception::Class)
 BuildRequires: x11-server-xvfb
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
