@@ -1,18 +1,22 @@
-%define upstream_name       Config-Model-Itself
+%define upstream_name    Config-Model-Itself
 %define upstream_version 1.213
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-License:    GPL or Artistic
-Group:      Development/Perl
+
 Summary:    Edit and validate configuration models
+License:    GPL+ or Artistic
+Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source:     http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
-BuildRequires: perl(Module::Build)
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Config::Model::TkUI)
 BuildRequires: perl(Exception::Class)
+BuildRequires: perl(Module::Build)
+BuildRequires: perl(Pod::POM)
 BuildRequires: x11-server-xvfb
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
@@ -53,4 +57,3 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %{_bindir}/config-model-edit
 %{perl_vendorlib}/Config
-
