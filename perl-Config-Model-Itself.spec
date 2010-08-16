@@ -41,7 +41,7 @@ for humans in the Config::Model manpage.
 ./Build
 
 %check
-xvfb-run ./Build test
+xvfb-run -n 14 ./Build test
 
 %install
 rm -rf %buildroot
