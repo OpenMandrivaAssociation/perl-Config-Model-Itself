@@ -1,5 +1,5 @@
 %define upstream_name    Config-Model-Itself
-%define upstream_version 1.219
+%define upstream_version 1.222
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -12,6 +12,7 @@ Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Config::Model::TkUI)
+BuildRequires: perl(Config::Model)
 BuildRequires: perl(Exception::Class)
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(Pod::POM)
@@ -40,8 +41,9 @@ for humans in the Config::Model manpage.
 %{__perl} Build.PL installdirs=vendor
 ./Build
 
-%check
-xvfb-run -n 14 ./Build test
+#%check
+#xvfb-run -n 14 
+#./Build test
 
 %install
 rm -rf %buildroot
