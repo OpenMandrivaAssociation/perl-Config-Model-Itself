@@ -1,15 +1,15 @@
 %define upstream_name    Config-Model-Itself
-%define upstream_version 1.225
+%define upstream_version 1.237
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.237
+Release:	1
 
 Summary:	Edit and validate configuration models
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Config/Config-Model-Itself-1.237.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Config::Model::TkUI)
@@ -106,4 +106,5 @@ perl Build.PL installdirs=vendor
 
 * Mon Jul 06 2009 cpan2dist 1.211-1mdv
 - initial mdv release, generated with cpan2dist
+
 
