@@ -1,15 +1,13 @@
 %define upstream_name    Config-Model-Itself
-%define upstream_version 1.238
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	1.238
+Release:	4
 
 Summary:	Edit and validate configuration models
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Config/Config-Model-Itself-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Config/Config-Model-Itself-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires: perl(namespace::autoclean)
@@ -36,7 +34,7 @@ structure data is structured and follow a set of rules which are described
 for humans in the Config::Model manpage.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 perl Build.PL installdirs=vendor
